@@ -74,10 +74,12 @@ namespace GOOS_SampleTests.Features
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "BudgetCreate")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("web")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("mytag")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("CleanBudgets")]
         public virtual void AddABudgetSuccessfully()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add a budget successfully", new string[] {
-                        "mytag"});
+                        "mytag",
+                        "CleanBudgets"});
 #line 9
 this.ScenarioSetup(scenarioInfo);
 #line 10
