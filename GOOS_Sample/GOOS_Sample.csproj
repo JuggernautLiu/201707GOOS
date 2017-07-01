@@ -200,6 +200,7 @@
     <Compile Include="Models\dataModels\Budgets.cs">
       <DependentUpon>BudgetModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\IBudgetService.cs" />
     <Compile Include="Models\ViewModels\BudgetAddViewModel.cs" />
     <Compile Include="Controllers\BudgetController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
