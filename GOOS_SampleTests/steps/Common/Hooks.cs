@@ -1,5 +1,7 @@
 ﻿using FluentAutomation;
+using GOOS_Sample.Models;
 using GOOS_SampleTests.DataModelsForIntegrationTest;
+using Microsoft.Practices.Unity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,6 +14,18 @@ namespace GOOS_SampleTests.steps.Common
     public sealed class Hooks
     {
         // For additional details on SpecFlow hooks see http://go.specflow.org/doc-hooks
+
+        [BeforeTestRun()]
+        public static void RegisterDIContainer()
+        {
+            UnityContainer = new UnityContainer();
+            UnityContainer.RegisterType<IBudgetService, BudgetService>();
+        }
+        public static IUnityContainer UnityContainer
+        {
+            get;
+            set;
+        }
 
         [BeforeScenario]
         [Scope(Tag = "web")]
