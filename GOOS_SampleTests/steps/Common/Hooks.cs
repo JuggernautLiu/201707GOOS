@@ -20,6 +20,7 @@ namespace GOOS_SampleTests.steps.Common
         {
             UnityContainer = new UnityContainer();
             UnityContainer.RegisterType<IBudgetService, BudgetService>();
+            //UnityContainer.RegisterType<IRepository<Budgets>, BudgetRepository>();
         }
         public static IUnityContainer UnityContainer
         {
