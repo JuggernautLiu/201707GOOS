@@ -7,6 +7,7 @@ using System.Linq;
 using System.Web.Mvc;
 using TechTalk.SpecFlow;
 using TechTalk.SpecFlow.Assist;
+using GOOS_Sample.Models;
 
 namespace GOOS_SampleTests
 {
@@ -19,7 +20,7 @@ namespace GOOS_SampleTests
         [BeforeScenario()]
         public void BeforeScenario()
         {
-            this._budgetController = new BudgetController();
+            this._budgetController = new BudgetController(new BudgetService());
         }
 
 

@@ -4,7 +4,7 @@ using GOOS_Sample.Models.dataModels;
 
 namespace GOOS_Sample.Models
 {
-    class BudgetService : IBudgetService
+    public class BudgetService : IBudgetService
     {
         public void Create(BudgetAddViewModel model)
         {
