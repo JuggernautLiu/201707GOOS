@@ -40,17 +40,17 @@ namespace GOOS_SampleTests.steps
             this._budgetCreatePage.ShouldDisplay(message);
         }
 
-        [Given(@"Budget table existed budgets")]
-        public void GivenBudgetTableExistedBudgets(Table table)
-        {
+        //[Given(@"Budget table existed budgets")]
+        //public void GivenBudgetTableExistedBudgets(Table table)
+        //{
 
-            var budgets = table.CreateSet<Budgets>();
-            using (var dbcontext = new goosEntities())
-            {
-                dbcontext.Budgets.AddRange(budgets);
-                dbcontext.SaveChanges();
-            }
-        }
+        //    var budgets = table.CreateSet<Budgets>();
+        //    using (var dbcontext = new goosEntities())
+        //    {
+        //        dbcontext.Budgets.AddRange(budgets);
+        //        dbcontext.SaveChanges();
+        //    }
+        //}
 
     }
 }
